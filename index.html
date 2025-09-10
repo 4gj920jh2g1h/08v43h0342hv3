@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NetfIix</title>
+  <link rel="icon" href="favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    /* Loader mirip Netflix (arc berputar) */
+    .loader {
+      width: 12vmin;
+      height: 12vmin;
+      border: 0.8vmin solid transparent;
+      border-top: 0.8vmin solid #e50914;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 5vmin;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Animasi fade-in */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 5vmin;
+      margin: 0 0 2vmin;
+    }
+
+    p {
+      color: #aaa;
+      font-size: 3.5vmin;
+      margin: 0.5vmin 0;
+    }
+
+    a {
+      color: #e50914;
+      text-decoration: underline;
+    }
+
+    /* Ukuran lebih stabil di desktop */
+    @media (min-width: 768px) {
+      .loader {
+        width: 80px;
+        height: 80px;
+        border: 6px solid transparent;
+        border-top: 6px solid #e50914;
+      }
+      h1 { font-size: 28px; }
+      p { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+  <h1 class="fade-in" style="animation-delay: 0.3s;">Just a moment...</h1>
+  <p class="fade-in" style="animation-delay: 0.8s;">You are being redirected to <b>NetfIix.</b></p>
+  <p class="fade-in" style="animation-delay: 1.3s;">If this page does not load automatically, 
+    <a href="https://o2o.to/i/7H3VPNC5SLIT"><b>click here</b></a>.
+  </p>
+
+  <script>
+    // Redirect otomatis setelah 1 detik
+    setTimeout(() => {
+      window.location.href = "https://o2o.to/i/7H3VPNC5SLIT";
+    }, 1000);
+  </script>
+</body>
+</html>
